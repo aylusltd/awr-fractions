@@ -1,0 +1,58 @@
+.Alert-modal{
+	position: fixed;
+	top:0;
+	left:0;
+	height: 100%;
+	width:100%;
+	background-color: rgba(0,0,0,0.2);
+}
+.Alert-main{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+	height: 50vh;
+	width: 50%;
+	max-width: 800px;
+	max-height: 800px;
+	min-height: 300px;
+	min-width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10%;
+	border: 2px solid white;
+}
+
+.Alert-main .Alert-title{
+	font-weight: 800;
+}
+.Alert-main .Alert-message{
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.Alert-main button{
+	position: relative;
+	height:10%;
+	width:20%;
+	margin-top: 25%;
+	font-size: calc(10px + 2vmin);
+	background-color: whitesmoke;
+}
+
+.Alert-main .Alert-cancel{
+	left:-25%;
+	
+}
+.Alert-main .Alert-cancel::after{
+	content:"🚫";
+}
+
+.Alert-main .Alert-ok{
+	left:25%;
+}
+
+.Alert-main .Alert-ok::after{
+	content: "✅";
+}

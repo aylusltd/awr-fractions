@@ -1,0 +1,31 @@
+.Answer{
+	position: relative;
+	top:120px;
+}
+
+.Answer .bar{
+	background-color: white;
+	height:10px;
+	width:100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.Answer input{
+	font-size: calc(10px + 2vmin);
+	width: 4em;
+	text-align: center;
+}
+
+.Answer input.mixed{
+	font-size: calc(40px + 6vmin);
+    width: 1.1em;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+
+.Answer>div{
+	display: inline-block;
+	margin: 5px;
+}
