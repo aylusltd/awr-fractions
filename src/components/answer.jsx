@@ -24,6 +24,7 @@ class Answer extends React.Component{
 	        	value={this.props.mixed}
 	        	onChange={this.bindState}
 	        	className="mixed"
+	        	placeholder="0"
 	        />
 	      </div>
 	      <div>
@@ -32,6 +33,7 @@ class Answer extends React.Component{
 		      	value={this.props.numerator}
 		      	onChange={this.bindState}
 		      	className="numerator"
+	        	placeholder="0"
 		  	  />
 		  	  <div className="bar" />
 		  	  <input
@@ -39,12 +41,13 @@ class Answer extends React.Component{
 		      	value={this.props.denominator}
 		  	    onChange={this.bindState}
 		      	className="denominator"
+	        	placeholder="0"
 		      />
 	      </div>
 	      <DisplayTable
-	        numerator={this.props.numerator}
-	        denominator={this.props.denominator}
-	        mixed={this.props.mixed}
+	        numerator={+this.props.numerator}
+	        denominator={+this.props.denominator}
+	        mixed={+this.props.mixed}
 	      />
 	    </div>
 	  );

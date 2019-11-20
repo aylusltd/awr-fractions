@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  position: relative;
-  top:-30vh;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +20,7 @@
     position: fixed;
     top: 1vh;
     font-weight: 900;
-    font-size: larger;
+    font-size: 5vh;
 }
 
 .App-link {

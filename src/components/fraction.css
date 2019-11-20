@@ -2,8 +2,7 @@
 	display: inline-block;
 	float: left;
 	width: 10%;
-	position: relative;
-	top:120px;
+	height: 75vh;
 }
 .Fraction .bar{
 	background-color: white;

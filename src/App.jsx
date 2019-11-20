@@ -10,10 +10,10 @@ import Alert from './components/alert.jsx';
 class App extends React.Component {
   constructor(props){
     super(props);
-    const f1 = Math.floor(Math.random()*12);
-    const f2 = Math.floor(Math.random()*12);
-    const d1 = Math.max(Math.floor(Math.random()*12),1);
-    const d2 = Math.max(Math.floor(Math.random()*12),1);
+    const f1 = Math.floor(Math.random()*10) + 1;
+    const f2 = Math.floor(Math.random()*10) + 1;
+    const d1 = Math.max(Math.floor(Math.random()*5),2);
+    const d2 = Math.max(Math.floor(Math.random()*5),1);
     const operator = Math.random()>0.5?'plus':'minus';
 
     if(f1/d1 < f2/d2 && operator === 'minus'){
@@ -34,8 +34,11 @@ class App extends React.Component {
       };
     }
     this.state.numerator=0;
+    this.state.numerator_display='';
     this.state.denominator=1;
+    this.state.denominator_display='';
     this.state.mixed=0;
+    this.state.mixed_display='';
     this.state.alertActive = false;
     this.state.alertColor = "#FF0000";
     this.state.alertMessage = "Hello World";
@@ -49,9 +52,12 @@ class App extends React.Component {
     const list = Array.from(e.target.classList);
     if(list.includes('numerator')){
       this.setState({numerator: +v});
+      this.setState({numerator_display: v});
     } else if (list.includes('denominator')){
       this.setState({denominator: +v});
+      this.setState({denominator_display: v});
     } else if (list.includes('mixed')){
+      this.setState({mixed_display: v});
       this.setState({mixed: +v});
     } else {
       console.log('missed');
@@ -82,8 +88,11 @@ class App extends React.Component {
       const operator = Math.random()>0.5?'plus':'minus';
       this.setState({
         numerator:0,
+        numerator_display:'',
         denominator:1,
+        denominator_display:'',
         mixed:0,
+        mixed_display:'',
         alertActive: false
       })
       if(f1/d1 < f2/d2 && operator === 'minus'){
@@ -158,9 +167,9 @@ class App extends React.Component {
           />
           <Answer 
             bindState={this.handleInput}
-            mixed={this.state.mixed}
-            numerator={this.state.numerator}
-            denominator={this.state.denominator}
+            mixed={this.state.mixed_display}
+            numerator={this.state.numerator_display}
+            denominator={this.state.denominator_display}
           />
           <Submit
             clickFunc={this.checkAnswer}
